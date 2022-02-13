@@ -1,1 +1,17 @@
+<div *ngIf="profile">
+    <div class="card" style="width: 18rem;">
+        <img src="{{profile.avatar_url}}" class="rounded-circle" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{profile.login}}</h5>
+          <p class="card-text">{{profile.bio}}</p>
+          
+        </div>
+      </div>
 
+<div class="follows">
+    <p>{{profile.followers}} <span>Followers</span></p>
+    <p>{{profile.following}} <span>Following</span></p>
+</div>
+
+
+</div>
