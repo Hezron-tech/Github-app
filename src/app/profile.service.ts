@@ -18,7 +18,7 @@ export class ProfileService {
 
 
   constructor(private http: HttpClient) {
-    this.profile = new Profile("", "", "", 0, 0, 0);
+    this.profile = new Profile("", "", "", "", 0, 0, 0);
     this.repo = new Repo("", "", "", "");
 
   }
@@ -30,6 +30,7 @@ export class ProfileService {
       login: string,
       avatar_url: string,
       bio: string,
+      html_url:string,
       followers: number,
       following: number,
       public_repos: number
@@ -49,6 +50,7 @@ export class ProfileService {
         this.profile.bio = response!.bio
         this.profile.followers = response!.followers
         this.profile.following = response!.following
+        this.profile.html_url = response!.html_url
         this.profile.public_repos = response!.public_repos
 
         console.log(this.profile)

@@ -1,1 +1,14 @@
-
+.prof{
+    margin-top: 2%;
+}
+.follows{
+    display: flex;
+    margin: 2%;
+    font-size: 20px;
+}
+.lower{
+    padding-right: 5%;
+}
+.view{
+    margin-top: 3%;
+}

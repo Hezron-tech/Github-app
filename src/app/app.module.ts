@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { profileComponent } from './profile/profile.component'
 import { ProfileService } from './profile.service';
+import { LandingComponent } from './landing/landing.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    profileComponent
+    profileComponent,
+    LandingComponent
   
   ],
 
