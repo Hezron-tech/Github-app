@@ -34,6 +34,7 @@ export class ProfileService {
       followers: number,
       following: number,
       public_repos: number
+
     }
     let headers = new HttpHeaders({
       authorization: 'token' + environment.apiKey,
@@ -52,6 +53,7 @@ export class ProfileService {
         this.profile.following = response!.following
         this.profile.html_url = response!.html_url
         this.profile.public_repos = response!.public_repos
+        
 
         console.log(this.profile)
 

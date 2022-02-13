@@ -8,6 +8,7 @@ export class Profile {
         public followers: number,
         public following: number,
         public public_repos: number
+        
     ) {
   }
 }
