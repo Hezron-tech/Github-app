@@ -15,43 +15,42 @@ import { Profile } from 'classes/profile';
 export class profileComponent implements OnInit {
   profile!: Profile;
   repo!: any;
+
   constructor( private profileRequest:ProfileService) {
     this.repo= new Repo("","","","")
     this.profile=new Profile("","","",0,0,0)
   }
+ 
  
   search(searchItem:any) {
     
     this.profileRequest.getUserProfile(searchItem).then((success)=>{
       this.profile = this.profileRequest.profile
       console.log(this.profile)
-    },
-         (error)=>{
-          console.log("error");
-  
-       }
-       )
+    
+        
 
-// here goes repo search
-
-
-
-
-
-      }
+       })
+      //  
+this.profileRequest.displayRepos(searchItem).then((success)=>{
+  this.repo=this.profileRequest.repo
+  console.log(this.repo)
+})
 
 
 
 
-    ngOnInit(): void {
 
-      this.search('Hezron-tech')
-    } 
+
+
   }
-
-function ngOnInit() {
-  throw new Error('Function not implemented.');
+  ngOnInit(): void {
+    this.search('Hezron-tech')
+  }
+  
 }
+
+
 
   
 
