@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { profileComponent } from './profile/profile.component'
 import { ProfileService } from './profile.service';
 import { LandingComponent } from './landing/landing.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     profileComponent,
-    LandingComponent
+    LandingComponent,
+    NavbarComponent
   
   ],
 
