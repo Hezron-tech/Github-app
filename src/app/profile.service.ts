@@ -65,12 +65,20 @@ export class ProfileService {
     
   }
 
+// repo function
 
+getRepo(user:string|number){
 
-  
+  interface apiResults{
 
+    login: string,
+    html_url: string,
+    description: string,
+    language: string
 
+  }
 
+}
 
 }
 
