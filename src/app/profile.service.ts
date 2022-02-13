@@ -65,20 +65,45 @@ export class ProfileService {
     
   }
 
-// repo function
 
-getRepo(user:string|number){
+  // getting user repo
 
-  interface apiResults{
 
-    login: string,
-    html_url: string,
-    description: string,
-    language: string
-
+  getUserRepo(searchRepo: string | number){
+    interface apiResults {
+      repos: number
+      login:string,
+      html_url:string,
+      description:string,
+      language:string
+    }
+    let headers = new HttpHeaders({
+      authorization: 'token' + environment.apiKey,
+    })
+    let options = { headers: headers }
+    let completeUrl = environment.apiUrl + searchRepo + '?api_Key' + environment.apiKey;
+    let promise = new Promise((resolve, reject) => {
+      this.http.get<apiResults>(completeUrl, options).toPromise().then(response => {
+        this.repo.login = response!.login
+        this.repo.html_url = response!.html_url
+        this.repo.description = response!.description
+        this.repo.language = response!.language
+        console.log(this.repo)
+        resolve(null)
+      },
+        error => {
+          reject(error)
+        })
+    })
+    return promise
   }
-
 }
 
-}
+
+
+
+
+
+
+  
 
