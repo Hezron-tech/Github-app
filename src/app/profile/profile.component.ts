@@ -31,19 +31,16 @@ export class profileComponent implements OnInit {
         
 
        })
-      //  
+       
 this.profileRequest.displayRepos(searchItem).then((success)=>{
   this.repo=this.profileRequest.repo
   console.log(this.repo)
 })
+ }
 
 
 
 
-
-
-
-  }
   ngOnInit(): void {
     this.search('Hezron-tech')
   }
