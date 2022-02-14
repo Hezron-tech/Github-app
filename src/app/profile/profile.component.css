@@ -12,3 +12,15 @@
 .view{
     margin-top: 3%;
 }
+
+.card{
+    margin: 3%;
+}
+
+.card-title{
+    font-size: 30px;
+}
+.card-text{
+    font-style: italic;
+    font-size: 20px;
+}
