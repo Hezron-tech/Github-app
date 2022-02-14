@@ -7,6 +7,7 @@ import { profileComponent } from './profile/profile.component'
 import { ProfileService } from './profile.service';
 import { LandingComponent } from './landing/landing.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SearchFormComponent } from './search-form/search-form.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppComponent,
     profileComponent,
     LandingComponent,
-    NavbarComponent
+    NavbarComponent,
+    SearchFormComponent
   
   ],
 
@@ -23,6 +25,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
+    
   ],
   providers: [ProfileService],
   bootstrap: [AppComponent]

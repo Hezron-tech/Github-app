@@ -14,7 +14,7 @@ import { environment } from 'src/environments/environment';
 export class ProfileService {
   profile!: Profile;
   repo!: any;
-
+  
 
 
   constructor(private http: HttpClient) {
@@ -30,7 +30,7 @@ export class ProfileService {
       login: string,
       avatar_url: string,
       bio: string,
-      html_url:string,
+      html_url: string,
       followers: number,
       following: number,
       public_repos: number
@@ -53,7 +53,7 @@ export class ProfileService {
         this.profile.following = response!.following
         this.profile.html_url = response!.html_url
         this.profile.public_repos = response!.public_repos
-        
+
 
         console.log(this.profile)
 
@@ -87,7 +87,7 @@ export class ProfileService {
     let url = environment.apiUrl + user + '/repos';
     let promise = new Promise((resolve, reject) => {
       this.http.get<apiResponse>(url).toPromise().then(response => {
-      this.repo=response!
+        this.repo = response!
 
         // this.repo.login=response!.login
         // this.repo.html_url = response!.html_url
@@ -107,6 +107,9 @@ export class ProfileService {
     });
     return promise
   }
+
+ 
+
 }
 
 
@@ -124,7 +127,7 @@ export class ProfileService {
 
 
 
-  
+
 
 
 
